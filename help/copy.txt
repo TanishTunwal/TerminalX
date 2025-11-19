@@ -1,0 +1,41 @@
+copy command
+
+copies many source files to a destination
+
+Syntax: copy [options]..sourceDir1/source1.txt sourceDir2/source2 destination/destFile ...
+
+
+not adding sourceDir1 or sourceDir2 finds files in current directory only
+destFile name should only be specified if only 1 soucefile is provided
+if destination is not provided, files are copied in same current working directory
+
+if destFile is already present, it is overwritten unless options are specified otherwise creates it
+
+Options implemented:
+-i -> Shows an interactive prompt when the file is already present
+
+-n -> If file is already present at destination, ensures that the file is not overwritten
+
+-u -> If file is already present at destination, overwrites 
+      only if the destination file is older than sourcefile(last modification time)
+
+-v -> prints the extra information about what the command has exactly done
+
+Note:-
+
+1.)    Options can be added anywhere as long as they are preceeded by -
+        copy -i -n
+        copy -in
+        copy -i soucefile1.txt -n
+        All give the same output
+
+2.)    Every permutation of options work
+3.)    if i & n  both  are present, the one which comes after takes priority
+4.)    if u is also present with n and i , u works as directed by n or i (checks for latest file)
+       then guided by n or i;
+5.)    Doesn't copy directories.
+
+Warning:------------------
+     Please don't try to copy a file , where a folder with same name is already present 
+
+

@@ -1,0 +1,55 @@
+chngdir command - Enhanced Directory Navigation
+
+Changes the current working directory with advanced navigation features
+
+Syntax: chngdir [options] [directory]
+        chngdir [bookmark_operations]
+
+
+Basic Usage:
+chngdir                    - Change to home directory
+chngdir [directory]        - Change to specified directory
+chngdir -                  - Go back to previous directory
+
+Bookmark Operations:
+chngdir --save <name>      - Save current directory as bookmark
+chngdir --go <name>        - Jump to saved bookmark
+chngdir --go              - Show all saved bookmarks
+chngdir --list            - Show all saved bookmarks
+
+History Operations:
+chngdir --recent          - Show recent directories
+
+
+Examples:
+chngdir /home/user/Documents
+chngdir --save docs                # Save current dir as 'docs'
+chngdir /tmp
+chngdir --go docs                  # Jump back to documents
+chngdir -                         # Go to previous directory (/tmp)
+chngdir --recent                  # See recent directories
+
+
+Smart Features:
+   • Remembers last 100 directories visited
+   • Save up to 20 named bookmarks
+   • Quick navigation with bookmark names
+   • Visual feedback for operations
+   • Error handling with helpful tips
+
+
+Note:-
+
+1.)    Bookmark names are case-sensitive
+        chngdir --save Project
+        chngdir --save project
+        These create different bookmarks
+
+2.)    Previous directory navigation only remembers one step back
+3.)    Bookmarks persist only during the current shell session
+4.)    Directory history shows most recent directories first
+5.)    If bookmark path no longer exists, shows error message
+
+Warning:------------------
+     Bookmarks are not persistent across shell sessions
+     Maximum 20 bookmarks and 100 history entries allowed

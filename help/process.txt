@@ -1,0 +1,23 @@
+process command
+
+Lists different processes on the system.
+
+without options tells PID , tty , TIME ,CMD
+
+Syntax: process [Options]..
+
+Options implemented:
+-a -> lists processes which are not related to session leaders && processes not related to a Terminal
+      
+-e -> lists all processes which are listed in proc irrespective of their nature
+
+-f -> defines formatting in ps command(amount of info about process).
+      lists UID , PPID , C , STIME (besides the ones which were printed without any options)
+-F -> defines even better formatting in ps command(amount of info about process).
+      lists SZ , RSS , PSR (besides the ones which were printed with -f)
+
+Note:-
+
+1.) If -f ,and -F both come together , formatting is decided by -F , else -f else normal
+2.) if -a and -e both come together , e dominates , then a , then normal
+3.) all permutations of aefF work

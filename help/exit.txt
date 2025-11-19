@@ -1,0 +1,6 @@
+exit command
+
+exits the Terminal session
+
+Syntax: exit
+

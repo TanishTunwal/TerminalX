@@ -1,0 +1,35 @@
+list command
+
+
+list command lists all the files and directories in a particular directory
+
+Syntax: list [options].. [directories]..
+
+both options and directories are optional
+
+if no directory is mentioned , lists files and directories from current folder
+
+Implemented Options:
+-a -> lists hidden files (starting with .)
+
+-r -> reverses the order of printing 
+
+-l -> gives detailed information about the files and folders
+
+-S -> used to sort the files and folders by size(sort while printing)
+      File with higher size comes above (when -r is not used , otherwise reversed)
+
+-t -> used to sort the files and folders by last modification time(sort while printing)
+      File with  latest modification time comes above (when -r is not used , otherwise reversed)
+
+Note:-
+
+1.)    Options can be added anywhere as long as they are preceeded by -
+        list -l -S
+        list -lS
+        list -l file1.txt -S
+        All give the same output
+
+2.)    Every permutation of options work
+3.)    if S and t , both are present, the one which comes after takes priority
+

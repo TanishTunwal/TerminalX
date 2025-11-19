@@ -1,0 +1,28 @@
+search command
+
+searches for a pattern in file/files
+
+Syntax: search [options].. [pattern] [files]..
+
+
+Implemented Options:
+-w -> Checks for word ,(shoudld not have alphabets or numbers side of it)
+
+-i -> Ignores Case while searching
+
+-n -> Prints line number also of lines where pattern is found
+
+-c -> prints the number of lines , where line is found
+
+Note:-
+1.) All permutations of options work
+2.) If -c comes only line count is printed 
+
+Special:-
+    a.b in pattern means . can be replaced by any character(single)
+    arb , axb are all matching patterns for a.b
+
+Note:- 
+    If you want to search "a b" in this terminal ,
+    it won't work ,
+    Instead search for "a.b"
